@@ -19,10 +19,10 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 public class Excel1
 {
 	private static String[] columns= { "R NO","NAME","DEPT_NAME","SUB","TOTAL","PERCENTAGE"};
-	static Scanner sc1 = new Scanner(System.in);
+	static Scanner scanner = new Scanner(System.in);
 	static String name = "", D_name = "";
 	static int m1 = 0, e1 = 0, cn1 = 0, j2 = 0, Total = 0;
-	static double per = 0.0;
+	static double percentage = 0.0;
 	//Creating work sheet
 	static Workbook workbook = new XSSFWorkbook();
 	static Sheet sheet = workbook.createSheet("Student Details");
@@ -89,7 +89,7 @@ public class Excel1
 	    
 	    int row = 2;
 	    System.out.println("How much student details your enter :");
-		int t = sc1.nextInt();
+		int t = scanner.nextInt();
 	    for(int i=1;i<=t;i++)
 		{
 			int Rno = i;
@@ -110,7 +110,7 @@ public class Excel1
 			    dataRow.createCell(6).setCellValue("-");
 		   
 		    dataRow.createCell(7).setCellValue(Total);
-		    dataRow.createCell(8).setCellValue(per+"%");
+		    dataRow.createCell(8).setCellValue(percentage+"%");
 		    row++;
 		}
 	   
@@ -141,9 +141,9 @@ public class Excel1
 	//User to get the input details
 	static void stu_details() {
 		System.out.println("Enter the Student Name :");
-		name = sc1.next();
+		name = scanner.next();
 		System.out.println("Enter the Department Name :");
-		D_name = sc1.next();
+		D_name = scanner.next();
 		check_dept(D_name);
 	}
 	//User to get the Department
@@ -158,42 +158,42 @@ public class Excel1
 		else
 		{
 			System.out.println("Please enter valid Department Name");
-			D_name = sc1.next();
+			D_name = scanner.next();
 			check_dept(D_name);
 		}
 	}
 	//User to got Department CSE means then Collect Subject wise Mark
 	static void cse_department() {
 		System.out.println("Enter the Maths Mark :");
-		m1 = sc1.nextInt();
+		m1 = scanner.nextInt();
 		System.out.println("Enter the English Mark :");
-		e1 = sc1.nextInt();
+		e1 = scanner.nextInt();
 		System.out.println("Enter the Computer Network Mark :");
-		cn1 = sc1.nextInt();
+		cn1 = scanner.nextInt();
 		j2 = 00;
 		total_marks(m1,e1,cn1);
 	}
 	//Add the Marks and calculate percentage
 	static void total_marks(int m1, int e1, int cn1) {
 		Total = m1 + e1 + cn1;
-		per = Total/3;
+		percentage = Total/3;
 	}
 	//User to got Department IT means then Collect Subject wise Mark
 	static void IT_Department() {
 		System.out.println("Enter the Maths Mark :");
-		m1 = sc1.nextInt();
+		m1 = scanner.nextInt();
 		System.out.println("Enter the English Mark :");
-		e1 = sc1.nextInt();
+		e1 = scanner.nextInt();
 		System.out.println("Enter the Computer Network Mark :");
-		cn1 = sc1.nextInt();
+		cn1 = scanner.nextInt();
 		System.out.println("Enter the Java Programming Mark :");
-		j2 = sc1.nextInt();
+		j2 = scanner.nextInt();
 		total_marks(m1,e1,cn1,j2);
 	}
 	//Add the Marks and calculate percentage
 	static void total_marks(int m2, int e2, int cn2, int j2) {
 		Total = m2 + e2 + cn2+ j2;
-		per = Total/4;
+		percentage = Total/4;
 	}
 	
 }

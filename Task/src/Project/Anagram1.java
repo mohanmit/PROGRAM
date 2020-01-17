@@ -10,13 +10,14 @@ public class Anagram1 {
 	    int[] arr1= new int[s.length()];
 	    String[] arr =s.split("[. ]"); 
 	    for(int i=0;i<arr.length-1;i++)
-	    {
+	    {   
+	   
 	    	for(int j=i+1;j<arr.length;j++)
 	    	{
 	    		  String str1=arr[i];
          		  String str2=arr[j];
    	    		 int status =  checkAnagram(str1,str2);
-
+                   //note anagram words
 	    		  if(status==1)
 	    		  {
 	    			  arr1[i]=-1;
@@ -33,9 +34,9 @@ public class Anagram1 {
 	    	}
 	    }
      		}
-
+               // function to check anagram
 	private static   int checkAnagram(String s1, String s2) {
-		          boolean check=  false; 
+		         
 		        char[] chr =   s1.toCharArray();
 		        char[] chr1 = s2.toCharArray();
 		        Arrays.sort(chr);

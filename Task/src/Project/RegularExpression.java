@@ -15,8 +15,5 @@ public class RegularExpression {
 	    	  System.out.println(" not a valid password");
 	      }
 	   }
-	
 }
-	
-
 

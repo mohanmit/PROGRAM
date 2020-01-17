@@ -11,16 +11,19 @@ public class Triangle {
 	    int n=size-1;
 		for(int i=size;i>=0;i--)
 		{
+			// loop to provide space
 		 for(int s=0;s<i;s++)
 		 {
 			 System.out.print("  ");
 		 }
+		 // to print left triangle
 			for(int j=i;j<=k;j++)
 			{ 
 				if(j<=size)
 				{
 					System.out.print(j+" ");
 				}
+				//to print left triangle
 				else if(j>size)
 				{
 					if(n>=0)

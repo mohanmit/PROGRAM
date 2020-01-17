@@ -10,19 +10,20 @@ public class Range {
 		for(int i=start;i<=end;i++)
 		{
 			check=true;
-		              String str =String.valueOf(i);
+			//to convert integer to string
+			
+		    String str =String.valueOf(i);
 		              
-		             char[] arr = str.toCharArray();
+		    char[] arr = str.toCharArray();
 			  
 			 for(int j=0;j<arr.length-1;j++)
 			 {
 				 for(int k=j+1;k<arr.length;k++)
-			 
+			   // to check same letter present or not
 				 if(arr[j]==arr[k])
 				 {
 				     check=false;
-				     //System.out.println( arr[j]);
-				 }
+				     
 			 }
 			 if(check==true)
 			 {
@@ -36,4 +37,5 @@ public class Range {
 	}
 
 }
+	}
 }
