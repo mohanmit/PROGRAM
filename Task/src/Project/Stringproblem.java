@@ -13,7 +13,7 @@ public class Stringproblem
 		{
 		    //System.out.print(s.charAt(i));
 		    if(s.charAt(i)<'0'||s.charAt(i)>'9'){
-		       c = c +s.charAt(i);
+              c = c +s.charAt(i);
 		       continue;
 		    }
 		    t=(t*10)+(s.charAt(i)-'0');
